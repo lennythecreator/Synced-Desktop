@@ -1,5 +1,5 @@
 import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@/components/ui/sidebar"
-import { HomeIcon, Recycle, UserCircle } from "lucide-react"
+import { ArmchairIcon, Circle, HomeIcon, Recycle, UserCircle } from "lucide-react"
 import Link from "next/link"
 
 export function AppSidebar() {
@@ -11,10 +11,16 @@ export function AppSidebar() {
             <SidebarGroupLabel>Nodes</SidebarGroupLabel>
             <SidebarMenu>
                 <SidebarMenuItem>
-                    <SidebarMenuButton asChild><Link href={'/hub'}><HomeIcon/>Hub</Link></SidebarMenuButton>
+                    <SidebarMenuButton asChild className="text-[16px] py-5"><Link href={'/hub'}><HomeIcon size={36}/>Hub</Link></SidebarMenuButton>
                 </SidebarMenuItem>
                 <SidebarMenuItem>
-                    <SidebarMenuButton asChild><Link href={'/'}><UserCircle/>Proifle</Link></SidebarMenuButton>
+                    <SidebarMenuButton asChild className="text-[16px] py-5"><Link href={'/circles'}><Circle size={36}/>Circles</Link></SidebarMenuButton>
+                </SidebarMenuItem>
+                <SidebarMenuItem>
+                    <SidebarMenuButton asChild className="text-[16px] py-5"><Link href={'/circles'}><ArmchairIcon size={36}/>Hangouts</Link></SidebarMenuButton>
+                </SidebarMenuItem>
+                <SidebarMenuItem>
+                    <SidebarMenuButton asChild className="text-[16px] py-5"><Link href={'/'}><UserCircle size={36}/>Proifle</Link></SidebarMenuButton>
                 </SidebarMenuItem>
                
             </SidebarMenu>
