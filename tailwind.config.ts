@@ -65,7 +65,30 @@ export default {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+		keyframes: {
+        shake: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '10%, 30%, 50%, 70%, 90%': { transform: 'translateX(-8px)' },
+          '20%, 40%, 60%, 80%': { transform: 'translateX(8px)' },
+        },
+        butlerbell: {
+          '0%, 100%': { transform: 'rotate(0deg)' },
+          '10%': { transform: 'rotate(-15deg)' },
+          '20%': { transform: 'rotate(10deg)' },
+          '30%': { transform: 'rotate(-10deg)' },
+          '40%': { transform: 'rotate(6deg)' },
+          '50%': { transform: 'rotate(-4deg)' },
+          '60%': { transform: 'rotate(2deg)' },
+          '70%': { transform: 'rotate(-1deg)' },
+          '80%': { transform: 'rotate(0deg)' },
+        },
+      },
+      animation: {
+        shake: 'shake 0.5s ease-in-out',
+        'shake-loop': 'shake 0.5s ease-in-out infinite',
+        'butler-bell': 'butlerbell 1s cubic-bezier(.36,.07,.19,.97) infinite',
+      },
   	}
   },
   plugins: [require("tailwindcss-animate")],
